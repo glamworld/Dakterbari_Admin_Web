@@ -29,7 +29,7 @@ class _AllBlogPageState extends State<AllBlogPage> {
       height: size.height,
       color: Colors.white,
       alignment: Alignment.center,
-      child: Column(
+      child: ListView(
         children: [
           Padding(
             padding: const EdgeInsets.all(8.0),
@@ -90,7 +90,7 @@ class _AllBlogPageState extends State<AllBlogPage> {
             ),
           ),
           _viewAllSection(text),
-          SizedBox(height: size.width / 40),
+          SizedBox(height: size.width / 50),
           _index==1?blogProvider.newsArticleList.isNotEmpty
               ? _postBuilder('all', blogProvider.newsArticleList)
               : NoData(message: 'No Post \u{1f614}'):_index==2?blogProvider.diseasesArticleList.isNotEmpty
@@ -112,7 +112,7 @@ class _AllBlogPageState extends State<AllBlogPage> {
               : NoData(message: 'No Post \u{1f614}'):blogProvider.allArticleList.isNotEmpty
               ? _postBuilder('all', blogProvider.allArticleList)
               : NoData(message: 'No Post \u{1f614}'),
-          SizedBox(height: size.width / 10),
+          //SizedBox(height: size.width / 10),
         ],
       ),
     );
@@ -142,7 +142,7 @@ class _AllBlogPageState extends State<AllBlogPage> {
     Size size = MediaQuery.of(context).size;
     return Container(
         padding: EdgeInsets.symmetric(horizontal: 10),
-        height: 400,
+        height: size.height*.785,
         width: size.width,
         //color: Colors.grey,
         child: GridView.builder(
@@ -207,8 +207,8 @@ class _PostTileState extends State<PostTile> {
             });
           },
           child: Container(
-            width: 200,
-            height: 200,
+            // width: 200,
+            // height: 200,
             margin: EdgeInsets.only(right: 10, top: 5, bottom: 5, left: 2.5),
             decoration: BoxDecoration(
                 color: Colors.white,

@@ -105,90 +105,88 @@ class _DiscountShopPaymentState extends State<DiscountShopPayment> {
                 SizedBox(height: 15),
                 Divider(height: 1,color: Colors.black),
                 Container(
-                  height: size.height * .7,
+                  height: size.height * .84,
                   width: size.width*.9,
-                  child: Expanded(
-                    child: ListView.builder(
-                        shrinkWrap: true,
-                        itemCount: operation.paymentDiscountList.length,
-                        itemBuilder: (context, index) {
-                          return Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Column(
-                              children: [
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    Expanded(
-                                        child: Center(
-                                          child: Text(
-                                            operation.paymentDiscountList[index].pName,
-                                            style: TextStyle(
-                                                color: Colors.grey.shade900,
-                                                fontSize: size.height * .02,
-                                                fontWeight: FontWeight.w400),
-                                          ),
-                                        )),
-                                    Expanded(
-                                        child: Center(
-                                          child: Text(
-                                            operation.paymentDiscountList[index].shopName,
-                                            style: TextStyle(
-                                                color: Colors.grey.shade900,
-                                                fontSize: size.height * .02,
-                                                fontWeight: FontWeight.w400),
-                                          ),
-                                        )),
-                                    Expanded(
-                                        child: Center(
-                                          child: Text(
-                                            operation.paymentDiscountList[index].amount,
-                                            style: TextStyle(
-                                                color: Colors.grey.shade900,
-                                                fontSize: size.height * .02,
-                                                fontWeight: FontWeight.w400),
-                                          ),
-                                        )),
-                                    Expanded(
-                                        child: Center(
-                                          child: Text(
-                                            operation.paymentDiscountList[index].currency,
-                                            style: TextStyle(
-                                                color: Colors.grey.shade900,
-                                                fontSize: size.height * .02,
-                                                fontWeight: FontWeight.w400),
-                                          ),
-                                        )),
-                                    Expanded(
-                                        child: Center(
-                                          child: Text(
-                                            operation.paymentDiscountList[index].paymentDate,
-                                            style: TextStyle(
-                                                color: Colors.grey.shade900,
-                                                fontSize: size.height * .02,
-                                                fontWeight: FontWeight.w400),
-                                          ),
-                                        )),
-                                    Expanded(
-                                        child: Center(
-                                          child: Text(
-                                            operation.paymentDiscountList[index].transactionId,
-                                            style: TextStyle(
-                                                color: Colors.grey.shade900,
-                                                fontSize: size.height * .02,
-                                                fontWeight: FontWeight.w400),
-                                          ),
-                                        )),
+                  child: ListView.builder(
+                      shrinkWrap: true,
+                      itemCount: operation.paymentDiscountList.length,
+                      itemBuilder: (context, index) {
+                        return Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            children: [
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Expanded(
+                                      child: Center(
+                                        child: Text(
+                                          operation.paymentDiscountList[index].pName,
+                                          style: TextStyle(
+                                              color: Colors.grey.shade900,
+                                              fontSize: size.height * .02,
+                                              fontWeight: FontWeight.w400),
+                                        ),
+                                      )),
+                                  Expanded(
+                                      child: Center(
+                                        child: Text(
+                                          operation.paymentDiscountList[index].shopName,
+                                          style: TextStyle(
+                                              color: Colors.grey.shade900,
+                                              fontSize: size.height * .02,
+                                              fontWeight: FontWeight.w400),
+                                        ),
+                                      )),
+                                  Expanded(
+                                      child: Center(
+                                        child: Text(
+                                          operation.paymentDiscountList[index].amount,
+                                          style: TextStyle(
+                                              color: Colors.grey.shade900,
+                                              fontSize: size.height * .02,
+                                              fontWeight: FontWeight.w400),
+                                        ),
+                                      )),
+                                  Expanded(
+                                      child: Center(
+                                        child: Text(
+                                          operation.paymentDiscountList[index].currency,
+                                          style: TextStyle(
+                                              color: Colors.grey.shade900,
+                                              fontSize: size.height * .02,
+                                              fontWeight: FontWeight.w400),
+                                        ),
+                                      )),
+                                  Expanded(
+                                      child: Center(
+                                        child: Text(
+                                          operation.paymentDiscountList[index].paymentDate,
+                                          style: TextStyle(
+                                              color: Colors.grey.shade900,
+                                              fontSize: size.height * .02,
+                                              fontWeight: FontWeight.w400),
+                                        ),
+                                      )),
+                                  Expanded(
+                                      child: Center(
+                                        child: Text(
+                                          operation.paymentDiscountList[index].transactionId,
+                                          style: TextStyle(
+                                              color: Colors.grey.shade900,
+                                              fontSize: size.height * .02,
+                                              fontWeight: FontWeight.w400),
+                                        ),
+                                      )),
 
-                                  ],
-                                ),
-                                SizedBox(height: 15),
-                                Divider(height: 1,color: Colors.grey.shade700,),
-                              ],
-                            ),
-                          );
-                        }),
-                  ),
+                                ],
+                              ),
+                              SizedBox(height: 15),
+                              Divider(height: 1,color: Colors.grey.shade700,),
+                            ],
+                          ),
+                        );
+                      }),
                 ),
               ],
             ))

@@ -250,12 +250,14 @@ class _WriteBlogPageState extends State<WriteBlogPage> {
         setState(() {
           _isLoading=true;
         });
-
-        provider.submitArticle(provider,file,phone.toString()).then((value){
-          setState(() {
-            _isLoading=false;
+        Future.delayed(Duration(seconds: 2), ()async {
+          provider.submitArticle(provider,file,phone.toString()).then((value){
+            setState(() {
+              _isLoading=false;
+            });
           });
         });
+
       }else{
         setState(() {
           _isLoading=false;

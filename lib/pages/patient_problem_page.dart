@@ -105,91 +105,90 @@ class _PatientProblemPageState extends State<PatientProblemPage> {
                 SizedBox(height: 15),
                 Divider(height: 1,color: Colors.black),
                 Container(
-                  height: size.height * .7,
+                  height: size.height * .84,
                   width: size.width*.9,
-                  child: Expanded(
-                    child: ListView.builder(
-                        shrinkWrap: true,
-                        itemCount: operation.patientsProblemList.length,
-                        itemBuilder: (context, index) {
-                          return Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Column(
-                              children: [
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    Expanded(
-                                        child: Center(
-                                          child: Text(
-                                            operation.patientsProblemList[index].messageFrom,
-                                            style: TextStyle(
-                                                color: Colors.grey.shade900,
-                                                fontSize: size.height * .02,
-                                                fontWeight: FontWeight.w400),
-                                          ),
-                                        )),
-                                    Expanded(
-                                        child: Center(
-                                          child: Text(
-                                            operation.patientsProblemList[index].name,
-                                            style: TextStyle(
-                                                color: Colors.grey.shade900,
-                                                fontSize: size.height * .02,
-                                                fontWeight: FontWeight.w400),
-                                          ),
-                                        )),
-                                    Expanded(
-                                        child: Center(
-                                          child: Text(
-                                            operation.patientsProblemList[index].message,
-                                            style: TextStyle(
-                                                color: Colors.grey.shade900,
-                                                fontSize: size.height * .02,
-                                                fontWeight: FontWeight.w400),
-                                          ),
-                                        )),
-                                    Expanded(
-                                        child: Center(
-                                          child: Text(
-                                            operation.patientsProblemList[index].phone,
-                                            style: TextStyle(
-                                                color: Colors.grey.shade900,
-                                                fontSize: size.height * .02,
-                                                fontWeight: FontWeight.w400),
-                                          ),
-                                        )),
+                  //color: Colors.grey,
+                  child: ListView.builder(
+                      shrinkWrap: true,
+                      itemCount: operation.patientsProblemList.length,
+                      itemBuilder: (context, index) {
+                        return Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            children: [
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Expanded(
+                                      child: Center(
+                                        child: Text(
+                                          operation.patientsProblemList[index].messageFrom,
+                                          style: TextStyle(
+                                              color: Colors.grey.shade900,
+                                              fontSize: size.height * .02,
+                                              fontWeight: FontWeight.w400),
+                                        ),
+                                      )),
+                                  Expanded(
+                                      child: Center(
+                                        child: Text(
+                                          operation.patientsProblemList[index].name,
+                                          style: TextStyle(
+                                              color: Colors.grey.shade900,
+                                              fontSize: size.height * .02,
+                                              fontWeight: FontWeight.w400),
+                                        ),
+                                      )),
+                                  Expanded(
+                                      child: Center(
+                                        child: Text(
+                                          operation.patientsProblemList[index].message,
+                                          style: TextStyle(
+                                              color: Colors.grey.shade900,
+                                              fontSize: size.height * .02,
+                                              fontWeight: FontWeight.w400),
+                                        ),
+                                      )),
+                                  Expanded(
+                                      child: Center(
+                                        child: Text(
+                                          operation.patientsProblemList[index].phone,
+                                          style: TextStyle(
+                                              color: Colors.grey.shade900,
+                                              fontSize: size.height * .02,
+                                              fontWeight: FontWeight.w400),
+                                        ),
+                                      )),
 
-                                    Expanded(
-                                        child: Center(
-                                          child: Text(
-                                            operation.patientsProblemList[index].email,
-                                            style: TextStyle(
-                                                color: Colors.grey.shade900,
-                                                fontSize: size.height * .02,
-                                                fontWeight: FontWeight.w400),
-                                          ),
-                                        )),
-                                    Expanded(
-                                        child: Center(
-                                          child: Text(
-                                            operation.patientsProblemList[index].submitDate,
-                                            style: TextStyle(
-                                                color: Colors.grey.shade900,
-                                                fontSize: size.height * .02,
-                                                fontWeight: FontWeight.w400),
-                                          ),
-                                        )),
+                                  Expanded(
+                                      child: Center(
+                                        child: Text(
+                                          operation.patientsProblemList[index].email,
+                                          style: TextStyle(
+                                              color: Colors.grey.shade900,
+                                              fontSize: size.height * .02,
+                                              fontWeight: FontWeight.w400),
+                                        ),
+                                      )),
+                                  Expanded(
+                                      child: Center(
+                                        child: Text(
+                                          operation.patientsProblemList[index].submitDate,
+                                          style: TextStyle(
+                                              color: Colors.grey.shade900,
+                                              fontSize: size.height * .02,
+                                              fontWeight: FontWeight.w400),
+                                        ),
+                                      )),
 
-                                  ],
-                                ),
-                                SizedBox(height: 15),
-                                Divider(height: 1,color: Colors.grey.shade700,),
-                              ],
-                            ),
-                          );
-                        }),
-                  ),
+                                ],
+                              ),
+                              SizedBox(height: 15),
+                              Divider(height: 1,color: Colors.grey.shade700,),
+                            ],
+                          ),
+                        );
+                      }),
                 ),
               ],
             ))

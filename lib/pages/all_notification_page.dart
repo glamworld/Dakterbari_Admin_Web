@@ -65,8 +65,9 @@ class _AllNotificationPageState extends State<AllNotificationPage> {
               SizedBox(height: 15),
               Divider(height: 1,color: Colors.black),
               Container(
-                height: size.height * .7,
+                height: size.height * .84,
                 width: size.width,
+                //color: Colors.grey,
                 child: ListView.builder(
                   //shrinkWrap: true,
                     itemCount: notificationProvider.notificationList.length,

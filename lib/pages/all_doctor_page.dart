@@ -608,6 +608,7 @@ class _AllDoctorPageState extends State<AllDoctorPage> {
                 child: Container(
                   height: size.height * .8,
                   width: size.height * 8.22,
+                  //color: Colors.grey,
                   child: ListView.builder(
                     //shrinkWrap: true,
                       itemCount: doctorProvider.allDoctorList.length,

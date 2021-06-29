@@ -158,7 +158,7 @@ class _PendingMedicinePageState extends State<PendingMedicinePage> {
                 ),
                 SizedBox(height: 20,),
                 Container(
-                  height: size.height*.7,
+                  height: size.height *.84,
                   width: size.height*6.22,
                   child: ListView.builder(
                     //shrinkWrap: true,

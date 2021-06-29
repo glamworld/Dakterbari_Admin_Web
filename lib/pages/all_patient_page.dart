@@ -335,8 +335,9 @@ class _AllPatientPageState extends State<AllPatientPage> {
                       height: 20,
                     ),
                     Container(
-                      height: size.height * .8,
+                      height: size.height * .83,
                       width: size.height * 4.5,
+                      //color: Colors.grey,
                       child: ListView.builder(
                           scrollDirection: Axis.vertical,
                           //shrinkWrap: true,

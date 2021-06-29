@@ -29,7 +29,7 @@ class _PendingBlogPageState extends State<PendingBlogPage> {
     height: size.height,
     color: Colors.white,
     alignment: Alignment.center,
-    child: Column(
+    child: ListView(
       children: [
         SizedBox(height: size.width / 40),
         blogProvider.pendingArticleList.isNotEmpty
@@ -44,7 +44,7 @@ class _PendingBlogPageState extends State<PendingBlogPage> {
     Size size = MediaQuery.of(context).size;
     return Container(
         padding: EdgeInsets.symmetric(horizontal: 10),
-        height: 400,
+        height: size.height*.785,
         width: size.width,
         //color: Colors.grey,
         child: GridView.builder(

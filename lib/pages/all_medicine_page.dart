@@ -431,8 +431,9 @@ class _AllMedicinePageState extends State<AllMedicinePage> {
                   height: 20,
                 ),
                 Container(
-                  height: size.height * .7,
+                  height: size.height * .84,
                   width: size.height * 6.22,
+                  //color: Colors.grey,
                   child: ListView.builder(
                       //shrinkWrap: true,
                       itemCount: provider.medicineList.length,

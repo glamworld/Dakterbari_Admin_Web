@@ -48,7 +48,7 @@ class _AllDiscountShopPageState extends State<AllDiscountShopPage> {
           children: [
             Container(
                 padding: EdgeInsets.symmetric(horizontal: 10),
-                height: 700,
+                height: size.height*.92,
                 width: size.width*.6,
                 //color: Colors.grey,
                 child: GridView.builder(

@@ -100,8 +100,9 @@ class _AllRepresentativePageState extends State<AllRepresentativePage> {
 
                 SizedBox(height: 20,),
                 Container(
-                  height: size.height*.7,
+                  height: size.height * .84,
                   width: size.height*3.30,
+                  //color: Colors.grey,
                   child: ListView.builder(
                     //shrinkWrap: true,
                       itemCount: provider.representativeList.length,

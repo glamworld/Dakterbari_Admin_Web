@@ -186,7 +186,7 @@ class _ArticleDetailsState extends State<ArticleDetails> {
 
             style: TextStyle(
                 color: Colors.grey[900],
-                fontSize: size.width*.045,
+                fontSize: size.width*.025,
                 fontWeight: FontWeight.bold),
           ),
         ),
