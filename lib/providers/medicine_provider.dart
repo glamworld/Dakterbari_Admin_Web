@@ -43,10 +43,8 @@ class MedicineProvider extends ChangeNotifier{
             darNo: element.doc['darNo'],
             state: element.doc['state']
           );
-          print('executed');
           _medicineList.add(medicineModel);
         });
-        print(_medicineList.length);
       });
       notifyListeners();
     }catch(error){}
@@ -155,7 +153,7 @@ class MedicineProvider extends ChangeNotifier{
         showToast('Medicine deleted');
       });
     },onError: (error){
-      //showSnackBar(scaffoldKey, error.toString());
+      showToast(error.toString());
     });
   }
 

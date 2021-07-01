@@ -223,11 +223,12 @@ class _PostTileState extends State<PostTile> {
                 Positioned(
                     top: 0,
                     left: 0,
+                    right: 0,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Container(
-                          height: 90,
+                          height: 170,
                           width: 400,
                           decoration: BoxDecoration(
                             color: Colors.white,
@@ -244,12 +245,12 @@ class _PostTileState extends State<PostTile> {
                             child: CachedNetworkImage(
                               imageUrl: widget.list![widget.index].photoUrl!,
                               width: 400,
-                              height: 90,
+                              height: 150,
                               placeholder: (context, url) => Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Image.asset(
                                   'assets/loadingimage.gif',
-                                  height: 90,
+                                  height: 150,
                                   width: 200,
                                   fit: BoxFit.fitHeight,
                                 ),
@@ -323,57 +324,61 @@ class _PostTileState extends State<PostTile> {
                 Positioned(
                   right: 0,
                   bottom: 0,
+                  left: 0,
                   child: Container(
                       padding: EdgeInsets.only(left: 5, right: 5),
-                      height: 30,
-                      width: 200,
+                      height: 40,
+                      width: 400,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.only(
                             bottomLeft: Radius.circular(10),
                             bottomRight: Radius.circular(10),
                           )),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                "${widget.list![widget.index].like ?? '0'}",
-                                textAlign: TextAlign.end,
-                                style: TextStyle(
-                                    color: Colors.pink,
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.w500),
-                              ),
-                              SizedBox(width: 5),
-                              Icon(
-                                CupertinoIcons.suit_heart,
-                                color: Colors.pink,
-                                size: 20,
-                              ),
-                            ],
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                "${widget.list![widget.index].share ?? '0'}",
-                                textAlign: TextAlign.end,
-                                style: TextStyle(
-                                    color: Theme.of(context).primaryColor,
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.w500),
-                              ),
-                              SizedBox(width: 5),
-                              Icon(
-                                CupertinoIcons.arrowshape_turn_up_right,
-                                color: Theme.of(context).primaryColor,
-                                size: 20,
-                              ),
-                            ],
-                          )
-                        ],
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  "${widget.list![widget.index].like ?? '0'}",
+                                  textAlign: TextAlign.end,
+                                  style: TextStyle(
+                                      color: Colors.pink,
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w500),
+                                ),
+                                SizedBox(width: 5),
+                                Icon(
+                                  CupertinoIcons.suit_heart,
+                                  color: Colors.pink,
+                                  size: 20,
+                                ),
+                              ],
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  "${widget.list![widget.index].share ?? '0'}",
+                                  textAlign: TextAlign.end,
+                                  style: TextStyle(
+                                      color: Theme.of(context).primaryColor,
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w500),
+                                ),
+                                SizedBox(width: 5),
+                                Icon(
+                                  CupertinoIcons.arrowshape_turn_up_right,
+                                  color: Theme.of(context).primaryColor,
+                                  size: 20,
+                                ),
+                              ],
+                            )
+                          ],
+                        ),
                       )),
                 ),
               ],

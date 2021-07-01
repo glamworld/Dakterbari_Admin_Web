@@ -45,7 +45,7 @@ class PaymentProvider extends ChangeNotifier{
       });
       notifyListeners();
     }catch(error){
-      print(error.toString());
+      showToast(error.toString());
     }
   }
 
@@ -73,7 +73,7 @@ class PaymentProvider extends ChangeNotifier{
       });
       notifyListeners();
     }catch(error){
-      print(error.toString());
+      showToast(error.toString());
     }
   }
 
@@ -108,12 +108,11 @@ class PaymentProvider extends ChangeNotifier{
               dollarUnit: element.doc['dollarUnit']
           );
           _amountList.add(amount);
-          print(amountList.length);
         });
       });
       notifyListeners();
     }catch(error){
-      print(error.toString());
+      showToast(error.toString());
     }
   }
 }

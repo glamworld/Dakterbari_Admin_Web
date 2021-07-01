@@ -1,3 +1,4 @@
+import 'package:admin_panel_web/widgets/form_decorate.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:admin_panel_web/model/problem_model.dart';
@@ -29,7 +30,7 @@ class ProblemProvider extends ChangeNotifier{
       });
       notifyListeners();
     }catch(error){
-      print(error.toString());
+      showToast(error.toString());
     }
   }
 
@@ -53,7 +54,7 @@ class ProblemProvider extends ChangeNotifier{
       });
       notifyListeners();
     }catch(error){
-      print(error.toString());
+      showToast(error.toString());
     }
   }
 

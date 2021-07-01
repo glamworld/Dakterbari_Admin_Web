@@ -404,7 +404,9 @@ class BlogProvider extends ChangeNotifier{
         });
       });
       notifyListeners();
-    }catch(error){}
+    }catch(error){
+      showToast(error.toString());
+    }
   }
 
   Future<void> getPopularArticle() async{

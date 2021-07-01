@@ -1,4 +1,5 @@
 import 'package:admin_panel_web/model/patient_model.dart';
+import 'package:admin_panel_web/widgets/form_decorate.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:intl/intl.dart';
@@ -16,6 +17,7 @@ class PatientProvider extends ChangeNotifier{
     try{
       await FirebaseFirestore.instance.collection('Patients').get().then((snapShot){
         _allPatientList.clear();
+        _newPatientList.clear();
         snapShot.docChanges.forEach((element) {
           PatientsModel patients=PatientsModel(
               id: element.doc['id'],
@@ -45,10 +47,9 @@ class PatientProvider extends ChangeNotifier{
         }
         i++;
       }
-      print(_newPatientList.length);
       notifyListeners();
     }catch(error){
-      print(error.toString());
+      showToast(error.toString());
     }
   }
 

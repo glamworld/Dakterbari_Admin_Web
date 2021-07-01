@@ -60,12 +60,11 @@ class NotificationProvider extends ChangeNotifier{
             date: element.doc['date'],
           );
           _notificationList.add(notifications);
-          //print(_representativeList.length);
         });
       });
       notifyListeners();
     }catch(error){
-      print(error.toString());
+      showToast(error.toString());
     }
   }
   Future<void> deleteNotification(String id,BuildContext context)async{
@@ -75,8 +74,7 @@ class NotificationProvider extends ChangeNotifier{
       });
 
     },onError: (error){
-      Navigator.pop(context);
-      //showSnackBar(scaffoldKey, error.toString());
+      showToast(error.toString());
     });
   }
 

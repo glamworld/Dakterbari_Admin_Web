@@ -218,7 +218,6 @@ class DoctorProvider extends ChangeNotifier{
         }
         i++;
       }
-      print(_newDoctorList.length);
       notifyListeners();
     }catch(error){
       showToast(error.toString());
@@ -270,7 +269,6 @@ class DoctorProvider extends ChangeNotifier{
           _doctorId.add(doctors);
         });
       });
-      print(_doctorId.length);
       notifyListeners();
     }catch(error){
       showToast(error.toString());
@@ -418,7 +416,6 @@ class DoctorProvider extends ChangeNotifier{
         });
       });
       notifyListeners();
-      print('faq get');
     }catch(error){}
   }
 

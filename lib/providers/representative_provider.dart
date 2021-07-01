@@ -44,14 +44,13 @@ class RepresentativeProvider extends ChangeNotifier{
             executivePhone: element.doc['executivePhone'],
             date: element.doc['date'],
           );
-          print('executed');
           _representativeList.add(representatives);
         });
         print(_representativeList.length);
       });
       notifyListeners();
     }catch(error){
-      print(error.toString());
+      showToast(error.toString());
     }
   }
 
@@ -62,7 +61,7 @@ class RepresentativeProvider extends ChangeNotifier{
         showToast('Representative deleted');
       });
     },onError: (error){
-      //showSnackBar(scaffoldKey, error.toString());
+      showToast(error.toString());
     });
   }
 
@@ -101,7 +100,7 @@ class RepresentativeProvider extends ChangeNotifier{
       });
       notifyListeners();
     }catch(error){
-      print(error.toString());
+      showToast(error.toString());
     }
   }
 

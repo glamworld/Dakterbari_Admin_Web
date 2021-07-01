@@ -49,7 +49,7 @@ class _DashBoardPageState extends State<DashBoardPage> {
         //physics: ClampingScrollPhysics(),
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: size.width<700?3: 4,
-          childAspectRatio: 1.4
+          childAspectRatio: 1.2
         ),
         children: [
           _gridViewTile(size,FontAwesomeIcons.userMd,Color(0xff00A958),
@@ -71,13 +71,13 @@ class _DashBoardPageState extends State<DashBoardPage> {
     );
   }
 
-  Widget _gridViewTile(Size size,IconData iconData, Color bgColor,
-      String heading1, String heading2, String h1Data, String h2Data){
+  Widget _gridViewTile(Size size,IconData iconData, Color bgColor, String heading1, String heading2, String h1Data, String h2Data){
+    final PublicProvider publicProvider = Provider.of<PublicProvider>(context);
     return Stack(
       children: [
         Container(
           width: size.height*.5,
-          height: size.height*.21,
+          height: size.height*.25,
           margin: EdgeInsets.only(top: size.height*.05,left: size.height*.02,right: size.height*.02),
           padding: EdgeInsets.symmetric(horizontal: size.height*.02,vertical: size.height*.02),
           decoration: BoxDecoration(
@@ -106,7 +106,27 @@ class _DashBoardPageState extends State<DashBoardPage> {
                 ],
               ),
               TextButton(
-                  onPressed: (){},
+                  onPressed: (){
+                    if(heading1=='Total Doctor'){
+                      publicProvider.category=publicProvider.subCategory;
+                      publicProvider.subCategory='All Doctor';
+                    }else if(heading1=='Total Patient'){
+                      publicProvider.category=publicProvider.subCategory;
+                      publicProvider.subCategory='All Patient';
+                    }else if(heading1=='Total Discount Shop'){
+                      publicProvider.category=publicProvider.subCategory;
+                      publicProvider.subCategory='All Shop';
+                    }else if(heading1=='All Blog'){
+                      publicProvider.category=publicProvider.subCategory;
+                      publicProvider.subCategory='All Blog';
+                    }else if(heading1=='Doctor Problem'){
+                      publicProvider.category=publicProvider.subCategory;
+                      publicProvider.subCategory='Doctor Problems';
+                    }else if(heading1=='Total Medicine'){
+                      publicProvider.category=publicProvider.subCategory;
+                      publicProvider.subCategory='All Medicine';
+                    }
+                  },
                   child: Text('View All',style: TextStyle(fontSize: size.height*.016,fontWeight: FontWeight.w400))
               )
             ],
